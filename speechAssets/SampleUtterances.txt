@@ -1,0 +1,7 @@
+HalloWorldIntent hallo
+HalloWorldIntent moin moin
+HalloWorldIntent hi
+HalloWorldIntent guten morgen
+HalloWorldIntent mahlzeit
+HalloWorldIntent guten Abend
+HalloWorldIntent moinsen
