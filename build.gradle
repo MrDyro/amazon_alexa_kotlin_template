@@ -1,5 +1,6 @@
 apply plugin: 'kotlin'
 apply plugin: 'java'
+apply plugin: 'com.github.ben-manes.versions'
 
 group 'com.example'
 version '1.0-SNAPSHOT'
@@ -10,13 +11,15 @@ compileJava {
 }
 
 buildscript {
-    ext.kotlin_version = '1.0.6'
+    ext.kotlin_version = '1.1.2'
 
     repositories {
         mavenCentral()
+        jcenter()
     }
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.github.ben-manes:gradle-versions-plugin:0.14.0'
     }
 }
 
@@ -29,12 +32,12 @@ repositories {
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
-    compile 'com.amazon.alexa:alexa-skills-kit:1.1.2'
-    compile 'com.amazonaws:aws-lambda-java-core:1.0.0'
-    compile 'com.amazonaws:aws-java-sdk-dynamodb:1.9.40'
+    compile 'com.amazon.alexa:alexa-skills-kit:1.3.0'
+    compile 'com.amazonaws:aws-lambda-java-core:1.1.0'
+    compile 'com.amazonaws:aws-java-sdk-dynamodb:1.11.124'
 
     compile 'log4j:log4j:1.2.17'
-    compile 'org.apache.commons:commons-lang3:3.3.2'
+    compile 'org.apache.commons:commons-lang3:3.5'
     compile 'org.apache.directory.studio:org.apache.commons.io:2.4'
     compile 'org.slf4j:slf4j-api:1.7.10'
 }
